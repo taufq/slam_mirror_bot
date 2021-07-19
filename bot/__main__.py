@@ -56,8 +56,8 @@ This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/ayushteke/slam_aria_mirror_bot_HEROKU")
-    buttons.buildbutton("Support Group", "https://t.me/AT_BOTs_support")
+    buttons.buildbutton("Repo", "https://github.com/testherokuvictim/slam_mirror_bot")
+    buttons.buildbutton("Support Group", "https://t.me/modrepos")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
     uptime = get_readable_time((time.time() - botStartTime))
@@ -71,7 +71,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 
 
 def restart(update, context):
-    restart_message = sendMessage("Restarting, Please wait!", context.bot, update)
+    restart_message = sendMessage("Restarting, Please wait!🙂", context.bot, update)
     # Save restart message object in order to reply to it after restarting
     with open(".restartmsg", "w") as f:
         f.truncate(0)
